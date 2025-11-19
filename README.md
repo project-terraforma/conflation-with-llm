@@ -4,7 +4,7 @@ This project is exploring the use of small, scalable LLMs and static embedding m
 
 # Objectives ✅ 
 
-Current models being invested are Alibaba’s Qwen3-2507, Meta’s Llamas, and Microsoft’s Phi-3 Mini, moving to static embedding models like Meta’s SONAR.
+Current models being investigated are Google's Electra, Meta’s Llamas, and Microsoft’s Phi-3 Mini, moving to static embedding models like Meta’s SONAR.
 
 Target metrics are:
 * <1K tokens per request
@@ -22,9 +22,6 @@ For contextual performance, the current target metrics measuring the accuracy ac
 Libraries: DSPy, Hugging Face transformers
 
 # Status
-11/2/2025
-The foundations for all three LLM models created and set up. Currently trying to reduce time for model requests, in addition to implementing SONAR and additional static embedding models. Switched to Google Colab to take advantage of their GPU capabilities for running the models on torch/cuda, as running on CPUs is too slow. The test system prompt is for the models to describe themselves. 
-
-# Findings
-11/2/2025
-QWEN3-2507-Instruct is taking the longest amount of time to load and respond to even the simplest system prompts. Phi 3 shows promising results, responding quickly to the test system prompt. 
+11/19/2025
+Accuracy for each model being investigated has significantly increased. Phi-3 Mini is producing a preliminary overall accuracy of 60.1%. Llama 3.2 is producing an overall accuracy of 53.6%. Instead
+of using a CausalLM such as Qwen3-2507, it has been replaced with a smaller, sequence classifier model, Google's Electra model that is producing an overal acuracy of 70.1%.

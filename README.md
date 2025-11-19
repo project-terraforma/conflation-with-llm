@@ -23,5 +23,4 @@ Libraries: DSPy, Hugging Face transformers
 
 # Status
 11/19/2025
-Accuracy for each model being investigated has significantly increased. Phi-3 Mini is producing a preliminary overall accuracy of 60.1%. Llama 3.2 is producing an overall accuracy of 53.6%. Instead
-of using a CausalLM such as Qwen3-2507, it has been replaced with a smaller, sequence classifier model, Google's Electra model that is producing an overal acuracy of 70.1%.
+Accuracy for each model being investigated has significantly increased. Phi-3 Mini is producing a preliminary overall accuracy of **60.1%**. Llama 3.2 is producing an overall accuracy of **53.6%**. Instead of using a CausalLM such as Qwen3-2507, it has been replaced with a smaller, sequence classifier model, Google's Electra model that is producing an overal acuracy of **70.1%**.

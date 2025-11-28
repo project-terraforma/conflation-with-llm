@@ -1,4 +1,4 @@
-# Ember Lu - Conflation With LLMs
+# 🌎 Ember Lu - Conflation With LLMs
 
 This project is exploring the use of small, scalable LLMs and static embedding models for the purpose of location conflation, or the matching of geographic locations, based on location metadata provided by Overture Maps Foundation.
 

@@ -63,7 +63,7 @@ For contextual performance, the current target metrics measuring the accuracy ac
 >     └── context_results.md               # Metric Summary and Context Analysis
 > ```
 
-# Running the Notebook (Models.ipynb)
+# Running the Models Notebook (Models.ipynb)
 1. Run: Cell 1 uses pip to install all necessary libraries: transformers, accelerate, torch, hugging_face
 2. Run: Cell 2 imports the necessary methods from Hugging Face for the models selected
 3. Choose a model to use, and scroll to the cell underneath the model's name labeled. Run the cell.
@@ -81,7 +81,7 @@ OKRs are 100% met! ✅ Phi-3 Mini has the best performance, but Llama 3.2 has ne
 Phi-3 Mini as an LLM-> Sequence Classifier is producing a overall accuracy of **90.4%**. 
 Llama 3.2 as an LLM -> Sequence Classifier is producing an overall accuracy of **89%**. 
 Google's Electra as a static embedding model is producing an overall acuracy of **85.7%**. 
-(see more metrics below and in results/context_results.md)
+See more metrics below and in results/context_results.md
 
 ## 📈 Metrics
 | Model                  | Accuracy | Precision | Recall | F1 Score | Pricing (USD)     | Avg. Tokens / Request | Avg. Time / Request |

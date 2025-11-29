@@ -12,7 +12,7 @@ This project is exploring the use of small, scalable LLMs and static embedding m
   - Avg. Tokens / Request: 215
   - Avg. Time / Request: 15.5 ms
 
-- **Best Price-to-Performance Model — Meta Llama 3.2**
+- ⭐ **Best Price-to-Performance — Meta Llama 3.2**
   - Accuracy: 89%
   - Precision: 0.901
   - Recall: 0.922
@@ -23,24 +23,16 @@ This project is exploring the use of small, scalable LLMs and static embedding m
 
 
 ## 🎯 Objectives ✅
-
 Models being benchmarked are Meta’s Llama 3.2, Microsoft’s Phi-3 Mini, and Google's Electra.
 
-Target metrics are:
+OKRs are 100% met. Target metrics calculated/measured are:
 * ✅ 50%+ ratio of true positive/negative to false positive/negative place matches (matplotlib)
 * ✅ Target > 50% Precision and > 50% Recall accuracy calculations
 * ✅ F1 Score > 80%
-* ✅ Pricing per request (I/O: <$1.25/1M tokens & <$10/1M tokens)
+* ✅ Pricing per request (<$1.25/1M tokens)
 * ✅ Time per request (around or <1sec)
 
-For contextual performance, the current target metrics measuring the accuracy across different features include:
-* ✅ categories
-* ✅ base_emails
-* ✅ websites
-* ✅ addresses
-* ✅ no exclusions
-
-Libraries: Hugging Face transformers, Torch
+For contextual performance, the current target metrics measuring the accuracy across different features include: categories, base_emails, websites, addresses, and no exclusions.
 
 ## 🛠️ Method Overview
 - **Transformers (Hugging Face):** Loaded and configured the models and tokenizer for sequence classification.  
@@ -71,10 +63,25 @@ Libraries: Hugging Face transformers, Torch
 >     └── context_results.md               # Metric Summary and Context Analysis
 > ```
 
+# Running the Notebook (Models.ipynb)
+1. Run: Cell 1 uses pip to install all necessary libraries: transformers, accelerate, torch, hugging_face
+2. Run: Cell 2 imports the necessary methods from Hugging Face for the models selected
+3. Choose a model to use, and scroll to the cell underneath the model's name labeled. Run the cell.
+* NOTE: For the Llama 3.2, login into HuggingFace is required first, with permissions needed for access to the model by the HF Llama moderators.
+4. Scroll down to Training Models, and run the cell directly underneath its label. This trains
+the model with our training data, part of the 3K data points in the parquet.
+* NOTE: For the Llama 3.2, the first two lines of code in the Training Models cell need to be uncommented (sets a necessary parameter for the tokenizer). For other models, comment out those lines.
+5. Scroll down to Evaluation Data, and run the three cells directly underneath its label. This lists
+accuracy metrics, tokens, precision, recall, F1 score, etc. 
 
-## 📊 Status  
-11/28/2025  
-Phi-3 Mini as an LLM-> Sequence Classifier is producing a  overall accuracy of **90.4%**. Llama 3.2 as an LLM -> Sequence Classifier is producing an overall accuracy of **89%**. Google's Electra as a static embedding model is producing an overall acuracy of **85.7%**. OKRs are 100% met! ✅
+
+## 📊 Status  (Updated: 11/28/2025)
+OKRs are 100% met! ✅ Phi-3 Mini has the best performance, but Llama 3.2 has nearly identical performance with 2x faster speed and half the price as the Phi-3 Mini. Current recommendation is the Llama 3.2.
+
+Phi-3 Mini as an LLM-> Sequence Classifier is producing a overall accuracy of **90.4%**. 
+Llama 3.2 as an LLM -> Sequence Classifier is producing an overall accuracy of **89%**. 
+Google's Electra as a static embedding model is producing an overall acuracy of **85.7%**. 
+(see more metrics below and in results/context_results.md)
 
 ## 📈 Metrics
 | Model                  | Accuracy | Precision | Recall | F1 Score | Pricing (USD)     | Avg. Tokens / Request | Avg. Time / Request |
